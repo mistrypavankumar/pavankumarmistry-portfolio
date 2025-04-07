@@ -22,7 +22,7 @@ export const Loader = () => {
 
   return (
     <div className="flex justify-center items-center h-screen w-screen bg-primary overflow-hidden z-50 fixed top-0 right-0 left-0 bottom-0">
-      <div className="flex justify-center items-center h-full w-full bg-black bg-opacity-80">
+      <div className="flex justify-center items-center h-full w-full bg-primary bg-opacity-80">
         <div className="sharingan">
           {/* Outer Ring (Red) */}
           <div className="outer-ring">

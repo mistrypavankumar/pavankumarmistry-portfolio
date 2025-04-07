@@ -6,7 +6,7 @@ import IssueChart from "@/app/_components/issueChart/IssueChart";
 
 const OpensourceCharts = () => {
   return (
-    <div>
+    <>
       <div className="os-charts-header-div">
         <h1 className="os-charts-header text-secondary font-bold">
           Contributions
@@ -20,7 +20,7 @@ const OpensourceCharts = () => {
         <PullRequestChart />
         <IssueChart />
       </div>
-    </div>
+    </>
   );
 };
 

@@ -12,9 +12,6 @@ const Opensource = () => {
       <OpensourceCharts />
       <div className="mb-[200px]" />
       <PullRequests />
-      {/* <Issues theme={this.props.theme} />
-        <Footer theme={this.props.theme} onToggle={this.props.onToggle} />
-        <TopButton theme={this.props.theme} /> */}
     </div>
   );
 };

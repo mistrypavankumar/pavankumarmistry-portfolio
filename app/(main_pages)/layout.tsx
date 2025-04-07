@@ -1,4 +1,5 @@
 import Header from "@/app/_components/header/Header";
+import Footer from "../_components/footer/Footer";
 
 export default function MainLayout({
   children,
@@ -13,6 +14,7 @@ export default function MainLayout({
       <body className="bg-primary font-lato">
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
