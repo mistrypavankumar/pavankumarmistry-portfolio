@@ -14,9 +14,6 @@
     font-size: 20px;
 }
 
-.skills-text-div {
-    margin-left: 50px;
-}
 
 .skills-main-div>* {
     flex: 1;
@@ -82,7 +79,6 @@
 
     .skills-text-div {
         margin-left: 0px;
-        margin: 20px;
     }
 
     .skills-text {
