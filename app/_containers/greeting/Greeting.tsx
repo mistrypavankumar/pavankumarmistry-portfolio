@@ -19,7 +19,7 @@ function Greeting() {
               Hi,
             </h1>
             <h1 className="greeting-title pb-4 md:pb-12 font-lato font-bold">
-              I'm <span className="text-accent">{greeting.title}</span>
+              I&apos;m <span className="text-accent">{greeting.title}</span>
             </h1>
             <h2 className="greeting-subtitle">{greeting.subTitle}</h2>
             <p className="text-[15px] md:text-[18px]">{greeting.body}</p>

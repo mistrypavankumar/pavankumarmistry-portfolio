@@ -1,4 +1,4 @@
-import Header from "../_components/header/Header";
+import Header from "@/app/_components/header/Header";
 
 export default function MainLayout({
   children,
@@ -8,7 +8,7 @@ export default function MainLayout({
   return (
     <html lang="en">
       <head>
-        <title>Pavan's Portfolio</title>
+        <title>Pavan&apos;s Portfolio</title>
       </head>
 
       <body className="bg-primary font-lato">
