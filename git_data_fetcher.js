@@ -6,7 +6,7 @@ const openSource = {
   githubUserName: `${process.env.REACT_APP_GITHUB_USERNAME}`,
 };
 
-var fs = require("fs");
+let fs = require("fs");
 
 const query_pr = {
   query: `
@@ -138,13 +138,13 @@ fetch(baseUrl, {
   .then((response) => response.text())
   .then((txt) => {
     const data = JSON.parse(txt);
-    var cropped = { data: [] };
+    let cropped = { data: [] };
     cropped["data"] = data["data"]["user"]["pullRequests"]["nodes"];
 
-    var open = 0;
-    var closed = 0;
-    var merged = 0;
-    for (var i = 0; i < cropped["data"].length; i++) {
+    let open = 0;
+    let closed = 0;
+    let merged = 0;
+    for (let i = 0; i < cropped["data"].length; i++) {
       if (cropped["data"][i]["state"] === "OPEN") open++;
       else if (cropped["data"][i]["state"] === "MERGED") merged++;
       else closed++;
@@ -176,12 +176,12 @@ fetch(baseUrl, {
   .then((response) => response.text())
   .then((txt) => {
     const data = JSON.parse(txt);
-    var cropped = { data: [] };
+    let cropped = { data: [] };
     cropped["data"] = data["data"]["user"]["issues"]["nodes"];
 
-    var open = 0;
-    var closed = 0;
-    for (var i = 0; i < cropped["data"].length; i++) {
+    let open = 0;
+    let closed = 0;
+    for (let i = 0; i < cropped["data"].length; i++) {
       if (cropped["data"][i]["closed"] === false) open++;
       else closed++;
     }
@@ -309,12 +309,12 @@ fetch(baseUrl, {
     const data = JSON.parse(txt);
     // console.log(txt);
     const projects = data["data"]["user"]["pinnedItems"]["nodes"];
-    var newProjects = { data: [] };
-    for (var i = 0; i < projects.length; i++) {
-      var obj = projects[i];
-      var langobjs = obj["languages"]["nodes"];
-      var newLangobjs = [];
-      for (var j = 0; j < langobjs.length; j++) {
+    let newProjects = { data: [] };
+    for (let i = 0; i < projects.length; i++) {
+      let obj = projects[i];
+      let langobjs = obj["languages"]["nodes"];
+      let newLangobjs = [];
+      for (let j = 0; j < langobjs.length; j++) {
         if (langobjs[j]["name"] in languages_icons) {
           newLangobjs.push({
             name: langobjs[j]["name"],

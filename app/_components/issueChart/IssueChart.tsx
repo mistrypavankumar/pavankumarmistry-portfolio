@@ -1,15 +1,6 @@
 import React from "react";
 import { Doughnut } from "react-chartjs-2";
-import {
-  Chart as ChartJS,
-  ArcElement,
-  Tooltip,
-  Legend,
-  ChartData,
-  ChartOptions,
-  ChartEvent,
-  ActiveElement,
-} from "chart.js";
+import { ChartData, ChartOptions, ChartEvent, ActiveElement } from "chart.js";
 
 import "./IssueChart.css";
 import IssueData from "../../shared/opensource/issues.json";

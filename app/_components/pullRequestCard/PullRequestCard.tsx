@@ -5,8 +5,8 @@ import { TbBrandStackshare } from "react-icons/tb";
 import "./PullRequestCard.css";
 
 const PullRequestCard = ({ pullRequest }: any) => {
-  var iconPR;
-  var bgColor;
+  let iconPR;
+  let bgColor;
   if (pullRequest["state"] === "OPEN") {
     iconPR = {
       iconifyClass: "octicon:git-pull-request",
@@ -27,12 +27,12 @@ const PullRequestCard = ({ pullRequest }: any) => {
     bgColor = "#030712";
   }
 
-  var subtitleString =
+  let subtitleString =
     "#" +
     pullRequest["number"] +
     " opened on " +
     pullRequest["createdAt"].split("T")[0];
-  var mergedBy;
+  let mergedBy;
   if (pullRequest["mergedBy"] !== null) {
     const name = pullRequest["mergedBy"]["login"];
     mergedBy = (

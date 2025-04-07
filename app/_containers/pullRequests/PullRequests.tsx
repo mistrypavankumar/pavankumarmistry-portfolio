@@ -11,7 +11,7 @@ const PullRequests = () => {
           Pull Requests
         </h1>
       </div>
-      <div className="pull-request-body-div">
+      <div className="pull-request-body-div mt-10">
         {pullRequestsData["data"].map((pullRequest) => {
           return (
             <PullRequestCard key={pullRequest.id} pullRequest={pullRequest} />
