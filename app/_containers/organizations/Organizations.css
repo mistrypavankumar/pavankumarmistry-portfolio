@@ -1,0 +1,43 @@
+#organizations {
+    margin-top: 2rem;
+    padding: 20px 10px;
+    margin-bottom: 5.5rem;
+}
+
+.organizations-subtitle {
+    font-size: 1.15em;
+    line-height: 1.1;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin: 18px auto;
+    width: 50%;
+}
+
+.organizations-header {
+    font-size: 40px;
+    line-height: 1.1;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@media (max-width: 1380px) {
+    .organizations-header {
+        font-size: 35px;
+    }
+
+    .organizations-subtitle {
+        width: 85%;
+    }
+}
+
+@media (max-width: 768px) {
+    .organizations-header {
+        font-size: 25px;
+    }
+
+    .organizations-subtitle {
+        width: 85%;
+    }
+}

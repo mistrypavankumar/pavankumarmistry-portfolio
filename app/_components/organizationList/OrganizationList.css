@@ -1,0 +1,53 @@
+.dev-icons-orgs {
+    padding-left: 0;
+    list-style: none;
+    font-size: 3rem;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 30px;
+}
+
+.organizations-img {
+    width: 100px;
+    height: auto;
+}
+
+.organizations-inline {
+    font-family: "Google Sans Regular";
+    background-color: #ffffff;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 10%;
+}
+
+.organizations-inline img {
+    width: 100%;
+}
+
+.organizations-inline:hover {
+    transform: scale(1.2);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+@media (max-width: 1380px) {}
+
+@media (max-width: 768px) {
+
+    .organizations-img {
+        width: 60px;
+    }
+
+    .dev-icons-orgs {}
+
+    .organizations-inline {
+        width: 60px;
+        height: 60px;
+    }
+}

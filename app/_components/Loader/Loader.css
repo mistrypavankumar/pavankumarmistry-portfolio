@@ -1,0 +1,232 @@
+.sharingan {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    animation: zoom 1s linear forwards;
+}
+
+.outer-ring {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #c00;
+    /* Sharingan red */
+    box-shadow: 0 0 20px #f00, 0 0 40px #f00;
+}
+
+.inner-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    background: #000;
+    border: 2px solid #333;
+}
+
+.pupil {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+    background: #c00;
+    box-shadow: 0 0 10px #f00;
+}
+
+.tomoe-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: rotate 4s linear infinite;
+}
+
+.tomoe {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #000;
+    border-radius: 50% 50% 0 50%;
+    transform: rotate(45deg);
+}
+
+.tomoe-1 {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.tomoe-2 {
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%) rotate(135deg);
+}
+
+.tomoe-3 {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(225deg);
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(5);
+    }
+}
+
+@media (max-width: 768px) {
+    @keyframes zoom {
+        0% {
+            transform: scale(1);
+        }
+
+        100% {
+            transform: scale(2);
+        }
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+/* Kamui Loader styles*/
+.kamui-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.kamui-eye {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #c00;
+    box-shadow: 0 0 30px #f00;
+    overflow: hidden;
+}
+
+/* Kamui Vortex Effect */
+.kamui-vortex {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.vortex-layer {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    animation: vortex-spin 12s linear infinite;
+}
+
+.vortex-1 {
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
+    animation-delay: 0s;
+}
+
+.vortex-2 {
+    top: 20%;
+    left: 20%;
+    right: 20%;
+    bottom: 20%;
+    animation-delay: -4s;
+}
+
+.vortex-3 {
+    top: 30%;
+    left: 30%;
+    right: 30%;
+    bottom: 30%;
+    animation-delay: -8s;
+}
+
+@keyframes vortex-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Shuriken-shaped Pupil */
+.kamui-pupil {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+}
+
+.shuriken-arm {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    clip-path: polygon(50% 0%, 80% 50%, 50% 100%, 20% 50%);
+}
+
+.arm-1 {
+    transform: rotate(0deg);
+}
+
+.arm-2 {
+    transform: rotate(120deg);
+}
+
+.arm-3 {
+    transform: rotate(240deg);
+}
+
+/* Space Warping Effect */
+.space-distortion {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 1px dashed rgba(100, 200, 255, 0.5);
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.3;
+    }
+}
