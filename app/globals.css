@@ -109,14 +109,12 @@ code {
 html,
 body {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-lato);
 }
 
-body {
-  margin: 0;
-  font: 19px / 23px Montserrat, "Montserrat", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+
 
 .donutchart-innertext-label {
   font-weight: 500;

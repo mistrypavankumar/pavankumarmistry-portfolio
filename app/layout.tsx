@@ -1,3 +1,4 @@
+import Loader from "./_components/Loader/Loader";
 import "./globals.css";
 
 export default function RootLayout({
@@ -7,7 +8,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-primary font-lato">{children}</body>
+      <body className="bg-primary font-lato">
+        <Loader />
+        {children}
+      </body>
     </html>
   );
 }

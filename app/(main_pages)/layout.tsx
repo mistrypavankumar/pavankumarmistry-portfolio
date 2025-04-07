@@ -10,7 +10,6 @@ export default function MainLayout({
       <head>
         <title>Pavan&apos;s Portfolio</title>
       </head>
-
       <body className="bg-primary font-lato">
         <Header />
         {children}

@@ -1,0 +1,48 @@
+{
+  "data": [
+    {
+      "login": "tech-introspectors",
+      "name": "Tech Introspectors",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/68457713?v=4",
+      "description": "We are Tech Introspectors.  ",
+      "websiteUrl": "http://teamintrospectors.tech/"
+    },
+    {
+      "login": "SoftWeb-Technologies",
+      "name": "SoftWeb Technologies",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/85301681?v=4",
+      "description": "",
+      "websiteUrl": "https://softwebcompany.tech"
+    },
+    {
+      "login": "Ryxo-Rides",
+      "name": "Kabb.in",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/87858659?v=4",
+      "description": "",
+      "websiteUrl": null
+    },
+    {
+      "login": "GDSC-BIET",
+      "name": "GDSC BIET",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/90209327?v=4",
+      "description": "Google Developer Student Club, BIET",
+      "websiteUrl": null
+    },
+    {
+      "login": "Bhole-Shankar-Furniture",
+      "name": "Bhole-Shankar-Furniture",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/134009446?v=4",
+      "description": null,
+      "websiteUrl": null
+    },
+    {
+      "login": "Promptgt-ai",
+      "name": "Promptgpt.ai",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/165454751?v=4",
+      "description": "",
+      "websiteUrl": null
+    }
+  ],
+  "totalCount": 6,
+  "updatedAt": "2025-04-07T21:00:16.485Z"
+}
