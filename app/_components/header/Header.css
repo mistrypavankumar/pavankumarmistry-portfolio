@@ -61,10 +61,6 @@ header .logo {
     align-items: center;
 }
 
-.menu {
-    font-family: "Google Sans Regular";
-}
-
 .header .menu {
     clear: both;
     max-height: 0;
