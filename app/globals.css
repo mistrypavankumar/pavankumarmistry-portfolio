@@ -1,26 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Base Colors */
+  --color-primary: #030712;
+  /* body/dark background */
+  --color-secondary: #FFFFFF;
+  /* light text/lightDark */
+
+  /* Accent Colors */
+  --color-accent: #00BCFF;
+  /* highlight */
+  --color-accent-dark: #0A2472;
+  /* jacketColor */
+
+  /* Text Colors */
+  --color-text: #FFFFFF;
+  /* main text */
+  --color-text-secondary: #7F8DAA;
+  /* secondaryText */
+
+  /* Special Colors */
+  --color-image-highlight: #0E6BA8;
+  --color-image-highlight-transparent: #0E6BA877;
+  /* headerColor with alpha */
+  --color-component-highlight: #E6E6E6;
+  /* compImgHighlight */
+
+  /* Dark Variants */
+  --color-dark: #00072D;
+
+
+  /* Fonts */
+  --font-agustina: "Agustina Regular", sans-serif;
+  --font-lato: "Lato", sans-serif;
+  --font-lato-bold: 'Lato', sans-serif, 700;
+  --font-family-mono: "Courier New", monospace;
+
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (min-width: 1000px) {
+  @layer {
+    .hide {
+      @apply hidden
+    }
   }
 }
 
+
+
+@font-face {
+  font-family: "Agustina Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Agustina Regular"),
+    url("@/fonts/Agustina.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+    url("@/fonts/Montserrat-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Google Sans Bold";
+  src: local("Google Sans Bold"),
+    url("@/fonts/GoogleSans-Bold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Google Sans Bold Italic";
+  src: local("Google Sans Bold Italic"),
+    url("@/fonts/GoogleSans-BoldItalic.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Google Sans Italic";
+  src: local("Google Sans Italic"),
+    url("@/fonts/GoogleSans-Italic.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Google Sans Medium";
+  src: local("Google Sans Medium"),
+    url("@/fonts/GoogleSans-Medium.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Google Sans Medium Italic";
+  src: local("Google Sans Medium Italic"),
+    url("@/fonts/GoogleSans-MediumItalic.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Google Sans Regular";
+  src: local("Google Sans Regular"),
+    url("@/fonts/GoogleSans-Regular.ttf") format("ttf");
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font: 19px / 23px Montserrat, "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.donutchart-innertext-label {
+  font-weight: 500;
+}
+
+@layer {
+  .container {
+    @apply w-[80%] mx-auto
+  }
+}
+
+/* Media Query */
+@media (max-width: 1380px) {
+
+  html,
+  body {
+    font-size: 16px;
+    line-height: normal;
+    font-family: "lato";
+  }
 }

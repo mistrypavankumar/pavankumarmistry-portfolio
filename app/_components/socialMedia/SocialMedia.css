@@ -1,0 +1,13 @@
+.social-media-div {
+    display: flex;
+    gap: 1.3rem;
+}
+
+.social-media-div a {
+    text-decoration: none;
+    color: #c9c5c5;
+}
+
+.social-media-div a:hover {
+    color: #00BCFF;
+}
