@@ -1,73 +1,75 @@
 import Link from "next/link";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 import { TbBrandStackshare } from "react-icons/tb";
-
 import "./PullRequestCard.css";
+import { PullRequest } from "@/app/libs/pullRequest";
 
-const PullRequestCard = ({ pullRequest }: any) => {
-  let iconPR;
-  let bgColor;
-  if (pullRequest["state"] === "OPEN") {
-    iconPR = {
-      iconifyClass: "octicon:git-pull-request",
-      style: { color: "#28a745" },
-    };
-    bgColor = "#dcffe4";
-  } else if (pullRequest["state"] === "MERGED") {
-    iconPR = {
-      iconifyClass: "octicon:git-merge",
-      style: { color: "#00BCFF" },
-    };
-    bgColor = "#030712";
-  } else {
-    iconPR = {
-      iconifyClass: "octicon:git-pull-request",
-      style: { color: "#d73a49" },
-    };
-    bgColor = "#030712";
-  }
+interface PullRequestCardProps {
+  pullRequest: PullRequest;
+}
 
-  let subtitleString =
-    "#" +
-    pullRequest["number"] +
-    " opened on " +
-    pullRequest["createdAt"].split("T")[0];
-  let mergedBy;
-  if (pullRequest["mergedBy"] !== null) {
-    const name = pullRequest["mergedBy"]["login"];
-    mergedBy = (
+const PullRequestCard = ({ pullRequest }: PullRequestCardProps) => {
+  // Determine icon and background color based on PR state
+  const getPRStateStyles = () => {
+    switch (pullRequest.state) {
+      case "OPEN":
+        return {
+          iconColor: "#28a745",
+          bgColor: "#dcffe4",
+          iconType: "octicon:git-pull-request" as const,
+        };
+      case "MERGED":
+        return {
+          iconColor: "#00BCFF",
+          bgColor: "#030712",
+          iconType: "octicon:git-merge" as const,
+        };
+      default: // CLOSED
+        return {
+          iconColor: "#d73a49",
+          bgColor: "#030712",
+          iconType: "octicon:git-pull-request" as const,
+        };
+    }
+  };
+
+  const { iconColor, bgColor } = getPRStateStyles();
+  const formattedDate = new Date(pullRequest.createdAt).toLocaleDateString();
+  const subtitleString = `#${pullRequest.number} opened on ${formattedDate}`;
+
+  const renderMergedBy = () => {
+    if (!pullRequest.mergedBy) return null;
+
+    return (
       <OverlayTrigger
-        key={name}
-        placement={"top"}
+        placement="top"
         overlay={
-          <Tooltip id={`tooltip-top`}>
-            <strong>{`Merged by ${name}`}</strong>
+          <Tooltip>
+            <strong>{`Merged by ${pullRequest.mergedBy.login}`}</strong>
           </Tooltip>
         }
       >
         <Link
-          href={pullRequest["mergedBy"]["url"]}
+          href={pullRequest.mergedBy.url}
           target="_blank"
           rel="noopener noreferrer"
         >
           <img
             className="merge-by-img"
-            src={pullRequest["mergedBy"]["avatarUrl"]}
-            alt="user avatar"
+            src={pullRequest.mergedBy.avatarUrl}
+            alt={`${pullRequest.mergedBy.login}'s avatar`}
           />
         </Link>
       </OverlayTrigger>
     );
-  } else {
-    mergedBy = <noscript></noscript>;
-  }
+  };
 
   return (
     <div
       className="pull-request-card text-text-secondary"
       style={{
         backgroundColor: bgColor,
-        border: `1px solid ${iconPR.style.color}`,
+        border: `1px solid ${iconColor}`,
       }}
     >
       <div className="pr-top">
@@ -76,71 +78,62 @@ const PullRequestCard = ({ pullRequest }: any) => {
             <TbBrandStackshare size={18} className="text-accent" />
           </div>
           <div className="pr-title-header">
-            <p className="pr-title">
+            <h3 className="pr-title">
               <Link
-                href={pullRequest["url"]}
+                href={pullRequest.url}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {pullRequest["title"]}
+                {pullRequest.title}
               </Link>
-            </p>
+            </h3>
             <p className="pr-subtitle">{subtitleString}</p>
           </div>
         </div>
         <div className="files-changed-header">
-          <p
+          <span
             className="files-changed-text"
-            style={{ backgroundColor: iconPR.style.color }}
+            style={{ backgroundColor: iconColor }}
           >
-            {pullRequest["changedFiles"]}
-          </p>
-          <p className="files-changed-text-2">Files Changed</p>
+            {pullRequest.changedFiles}
+          </span>
+          <span className="files-changed-text-2">Files Changed</span>
         </div>
       </div>
+
       <div className="pr-down">
         <div className="changes-repo">
           <p className="parent-repo">
             Repository:{" "}
             <Link
-              style={{ color: iconPR.style.color }}
-              href={pullRequest["baseRepository"]["url"]}
+              style={{ color: iconColor }}
+              href={pullRequest.baseRepository.url}
             >
-              {pullRequest["baseRepository"]["owner"]["login"]}/
-              {pullRequest["baseRepository"]["name"]}
+              {pullRequest.baseRepository.owner.login}/
+              {pullRequest.baseRepository.name}
             </Link>
           </p>
           <div className="changes-files">
-            <p className="additions-files">
-              <strong>{pullRequest["additions"]} + </strong>
-            </p>
-            <p className="deletions-files">
-              <strong>{pullRequest["deletions"]} - </strong>
-            </p>
-            {mergedBy}
+            <span className="additions-files">
+              <strong>{pullRequest.additions} + </strong>
+            </span>
+            <span className="deletions-files">
+              <strong>{pullRequest.deletions} - </strong>
+            </span>
+            {renderMergedBy()}
           </div>
         </div>
-        <div
-          className="owner-img-div"
-          style={{
-            backgroundColor: "#ffffff",
-            height: "40px",
-            width: "40px",
-            borderRadius: "10%",
-          }}
-        >
+
+        <div className="owner-img-div">
           <Link
-            href={pullRequest["baseRepository"]["owner"]["url"]}
+            href={pullRequest.baseRepository.owner.url}
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
               className="owner-img"
-              style={{
-                width: "100%",
-              }}
-              src={pullRequest["baseRepository"]["owner"]["avatarUrl"]}
-              alt="user avatar"
+              src={pullRequest.baseRepository.owner.avatarUrl}
+              alt={`${pullRequest.baseRepository.owner.login}'s avatar`}
             />
           </Link>
         </div>
