@@ -11,7 +11,7 @@ export default function MainLayout({
         <title>Pavan's Portfolio</title>
       </head>
 
-      <body className="bg-primary">
+      <body className="bg-primary font-lato">
         <Header />
         {children}
       </body>

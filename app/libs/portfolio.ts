@@ -447,7 +447,6 @@ const contactPageData = {
 export {
   settings,
   greeting,
-  socialMediaLinks,
   skills,
   competitiveSites,
   degrees,
