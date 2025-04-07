@@ -1,13 +1,18 @@
 import { Icon } from "@iconify/react";
-
 import "./SoftwareSkill.css";
 
-const SoftwareSkill = ({ logos }: any) => {
+interface SoftwareSkillLogo {
+  skillName: string;
+  fontAwesomeClassname: string;
+  style?: React.CSSProperties;
+}
+
+const SoftwareSkill = ({ logos }: { logos: SoftwareSkillLogo[] }) => {
   return (
     <div>
       <div className="software-skills-main-div mt-5">
         <ul className="dev-icons">
-          {logos.map((logo: any) => (
+          {logos.map((logo) => (
             <li
               key={logo.skillName}
               className="software-skill-inline"
