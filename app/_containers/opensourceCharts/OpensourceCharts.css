@@ -2,8 +2,6 @@
     font-size: 40px;
     line-height: 1.1;
     text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .os-charts-body-div {
@@ -12,7 +10,7 @@
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    /* table-layout: fixed; */
+    flex-wrap: wrap;
     width: 80%;
     margin: 12px auto;
     gap: 100px;
@@ -22,8 +20,6 @@
     font-size: 1.15em;
     line-height: 1.1;
     text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
     width: 50%;
     margin: 12px auto;
 }
