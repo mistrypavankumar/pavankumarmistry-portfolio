@@ -1,6 +1,5 @@
 import React from "react";
 import "./Organizations.css";
-// import OrganizationList from "../../components/organizationList/OrganizationList";
 import OrganizationsData from "../../shared/opensource/organizations.json";
 import OrganizationList from "@/app/_components/organizationList/OrganizationList";
 
