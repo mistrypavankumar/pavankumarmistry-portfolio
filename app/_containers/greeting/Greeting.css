@@ -55,7 +55,6 @@
     margin-top: 80px;
     font-size: 60px;
     line-height: 1.1;
-    font-family: "Google Sans Bold";
 }
 
 .greeting-subtitle {
@@ -68,14 +67,12 @@
 .greeting-nickname {
     font-size: 30px;
     line-height: 0px;
-    font-family: "Google Sans Bold Italic";
 }
 
 .greeting-text-p {
     font-size: 20px;
     line-height: 20px;
     margin-right: 20px;
-    font-family: "Google Sans Medium";
 }
 
 .greeting-image-div>* {
