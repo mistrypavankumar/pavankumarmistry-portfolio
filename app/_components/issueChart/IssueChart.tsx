@@ -48,7 +48,7 @@ const IssueChart: React.FC = () => {
   };
 
   return (
-    <div style={{ width: "400px", height: "400px" }}>
+    <div className="w-[300px] h-[300px] md:w-[400px] md:h-[400px]">
       <h2 className="text-xl text-secondary my-10">Issue Distribution</h2>
       <Doughnut data={data} options={options} />
     </div>
