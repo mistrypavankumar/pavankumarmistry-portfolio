@@ -15,10 +15,10 @@ function Greeting() {
       <div className="greeting-main">
         <div className="greeting-text-div">
           <div className="text-secondary">
-            <h1 className="greeting-hi text-secondary pb-4 md:pb-12 font-lato font-bold">
+            <h1 className="greeting-hi text-secondary pb-2 font-lato font-bold">
               Hi,
             </h1>
-            <h1 className="greeting-title pb-4 md:pb-12 font-lato font-bold">
+            <h1 className="greeting-title pb-4 font-lato font-bold">
               I&apos;m <span className="text-accent">{greeting.title}</span>
             </h1>
             <h2 className="greeting-subtitle">{greeting.subTitle}</h2>
