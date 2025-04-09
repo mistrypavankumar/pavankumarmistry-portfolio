@@ -8,7 +8,6 @@ interface CompetitiveSite {
   iconName: IconType;
   style?: {
     color?: string;
-    [key: string]: any;
   };
   profileLink: string;
 }
