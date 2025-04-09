@@ -1,3 +1,6 @@
+import { SiHackerrank, SiCodechef, SiC } from "react-icons/si";
+import { CompetitiveSitesData } from "./competitive";
+
 /* Change this file to get your personal Porfolio */
 
 // Website related settings
@@ -234,39 +237,54 @@ const skills = {
 };
 
 // Education Page
-const competitiveSites = {
+const competitiveSites: CompetitiveSitesData = {
   competitiveSites: [
     {
       siteName: "HackerRank",
-      iconifyClassname: "simple-icons:hackerrank",
+      iconName: SiHackerrank,
       style: {
         color: "#2EC866",
       },
       profileLink: "https://www.hackerrank.com/pavan_kumar143mg?hr_r=1",
     },
-    {
-      siteName: "Codechef",
-      iconifyClassname: "simple-icons:codechef",
-      style: {
-        color: "#5B4638",
-      },
-      profileLink: "https://www.codechef.com/users/pavan_kumar777",
-    },
+    // {
+    //   siteName: "Codechef",
+    //   iconName: SiCodechef,
+    //   style: {
+    //     color: "#5B4638",
+    //   },
+    //   profileLink: "https://www.codechef.com/users/pavan_kumar777",
+    // },
   ],
 };
 
 const degrees = {
   degrees: [
     {
+      title: "Rowan University",
+      location: "NJ, USA",
+      subtitle: "MS in Computer Science",
+      logo_path: "biet-logo.png",
+      alt_name: "rowan-university",
+      duration: "2023 - Present",
+      descriptions: [
+        "🔹 Mastering advanced CS concepts: Algorithms, Cybersecurity, Data Mining/Warehousing, and Distributed Databases",
+        "🔹 Developing expertise in computer architecture and Agile software engineering methodologies",
+        "🔹 Building research capabilities in emerging technologies through academic projects",
+      ],
+      website_link: "http://rowan.edu",
+    },
+    {
       title: "Bharat Institute of Engineering and Technology",
+      location: "Hyderabad, India",
       subtitle: "B.Tech. in Computer Engineering",
       logo_path: "biet-logo.png",
       alt_name: "IIITDM Kurnool",
-      duration: "2020 - Present",
+      duration: "2020 - 2023",
       descriptions: [
-        "⚡ I have studied basic software engineering subjects like DS, Algorithms, DBMS, OS, CA, AI etc.",
-        "⚡ Apart from this, I have done courses on Deep Learning, Data Science, Cloud Computing and Full Stack Development.",
-        "⚡ I secured first place in Hackathon with over 100 participants for coming up with the idea of Agrodrone. Though agrodrones already exist, our model is more affordable and efficient.",
+        "🔹 Built strong CS foundation in Data Structures, Algorithms, DBMS, and Operating Systems",
+        "🔹 Won 1st place in 100+ participant Hackathon for innovative Agrodrone solution",
+        "🔹 Gained full-stack development skills through coursework and projects",
       ],
       website_link: "http://biet.ac.in",
     },
