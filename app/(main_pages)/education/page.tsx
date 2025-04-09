@@ -1,13 +1,12 @@
 import Image from "next/image";
-// import Educations from "../../containers/education/Educations";
-// import Certifications from "../../containers/certifications/Certifications";
-// import CompetitiveSites from "../../components/competitiveSites/CompetitiveSites";
 import education_img from "@/public/assests/images/education.svg";
+
+import Educations from "@/app/_containers/education/Educations";
 import CompetitiveSites from "@/app/_components/competitiveSites/CompetitiveSites";
+import Certifications from "@/app/_containers/certifications/Certifications";
 import { competitiveSites } from "@/app/libs/portfolio";
 
 import "./Education.css";
-import Educations from "@/app/_containers/education/Educations";
 
 const Education = () => {
   return (
@@ -26,7 +25,7 @@ const Education = () => {
           </div>
         </div>
         <Educations />
-        {/* <Certifications theme={this.props.theme} /> */}
+        <Certifications />
       </div>
     </div>
   );
