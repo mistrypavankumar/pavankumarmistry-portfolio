@@ -1,4 +1,4 @@
-import { SiHackerrank, SiCodechef, SiC } from "react-icons/si";
+import { SiHackerrank } from "react-icons/si";
 import { CompetitiveSitesData } from "./competitive";
 
 /* Change this file to get your personal Porfolio */

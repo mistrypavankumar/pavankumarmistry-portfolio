@@ -24,6 +24,7 @@ const CompetitiveSites: React.FC<CompetitiveSitesProps> = ({ logos }) => {
         {logos.map((logo: CompetitiveSite) => {
           return (
             <li
+              key={logo.siteName}
               className="w-[70px] h-[70px] bg-secondary flex items-center justify-center rounded-xl overflow-hidden"
               style={logo.style}
               title={logo.siteName}
