@@ -1,7 +1,5 @@
 // theme.ts
 
-
-
 export const portfolioTheme = {
   body: "#030712",
   text: "#FFFFFF",

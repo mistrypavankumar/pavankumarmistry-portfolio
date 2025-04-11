@@ -11,7 +11,7 @@ const Certifications = () => {
           Certifications
         </h1>
       </div>
-      <div className="certs-body-div">
+      <div className="flex justify-center items-center flex-wrap md:flex-nowrap w-full gap-10 md:gap-0">
         {certifications.certifications.map((cert, index) => {
           return <CertificationCard key={index} certificate={cert} />;
         })}

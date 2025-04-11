@@ -1,25 +1,6 @@
-.cert-card {
-  width: 30%;
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border: 1px solid #d9dbdf;
-  border-radius: 5px;
-  box-shadow: 5px 5px 5px #d9dbdf;
-  margin-bottom: 30px;
-  flex: 0 0 30%;
-}
-
 .cert-header {
   margin: 0px;
   border-radius: 5px 5px 0px 0px;
-}
-
-.logo_img {
-  margin: 3px;
-  width: auto;
-  height: 100px;
 }
 
 .cert-body {
