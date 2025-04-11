@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-import graduation_img from "@/public/assests/images/graduation.svg";
 import DegreeCard from "@/app/_components/degreeCard/DegreeCard";
 import { degrees } from "@/app/libs/portfolio";
 
@@ -17,7 +16,12 @@ const Educations = () => {
 
       <div className="flex justify-between items-center flex-col-reverse md:flex-row">
         <div>
-          <Image src={graduation_img} width={700} alt="graduation image" />
+          <Image
+            src={"/assets/images/graduation.svg"}
+            width={700}
+            height={600}
+            alt="graduation image"
+          />
         </div>
         <div className="flex flex-col gap-14">
           {degrees.degrees.map((degree, index) => {

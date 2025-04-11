@@ -294,58 +294,114 @@ const degrees = {
 const certifications = {
   certifications: [
     {
-      title: "Machine Learning",
-      subtitle: "- Cognitive class.ai",
-      logo_path: "cognitiveclass.png",
+      title: "Frontend Developer (React)",
+      subtitle: "- HackerRank",
+      logo_path: "certificate_2.png",
       certificate_link:
-        "https://drive.google.com/file/d/1E4ix5A3JWzAbI3XuAmv3QQEK5bsRf0yH/view",
-      alt_name: "Stanford University",
-      color_code: "#8C151599",
+        "https://drive.google.com/file/d/1G2eeHwIhfZ7tQVN5cFP-9jd08ohJ3xl3/view?usp=sharing",
+      alt_name: "HackerRank",
+      color_code: "#1F70C199",
     },
     {
-      title: "Deep Learning",
-      subtitle: "- Andrew Ng",
-      logo_path: "deeplearning_ai_logo.png",
+      title: "Problem Solving (Intermediate)",
+      subtitle: "- HackerRank",
+      logo_path: "certificate_3.png",
       certificate_link:
-        "https://www.coursera.org/account/accomplishments/verify/V77LNKZFC3CV",
-      alt_name: "deeplearning.ai",
+        "https://drive.google.com/file/d/13CZqUVoviCBN9y_ca3XTYnB53z97jkfV/view?usp=sharing",
+      alt_name: "HackerRank",
+      color_code: "#1F70C199",
+    },
+
+    {
+      title: "SQL (Advanced)",
+      subtitle: "- HackerRank",
+      logo_path: "certificate_5.png",
+      certificate_link:
+        "https://drive.google.com/file/d/1_zpjS3nZAQWyaP1Aa1ZGLlwtI9jPp20W/view?usp=sharing",
+      alt_name: "HackerRank",
+      color_code: "#1F70C199",
+    },
+    {
+      title: "React Basics",
+      subtitle: "- Meta",
+      logo_path: "certificate_4.png",
+      certificate_link:
+        "https://drive.google.com/file/d/1yNdpSOPdMN73G4dQljhxcEWFCbCXUj3O/view?usp=sharing",
+      alt_name: "Coursera",
       color_code: "#00000099",
     },
     {
-      title: "Programming for Web with JavaScript",
-      subtitle: "- Chris Murphy",
-      logo_path: "penn_logo.png",
+      title: "HTML and CSS in depth",
+      subtitle: "- Meta",
+      logo_path: "certificate_6.png",
       certificate_link:
-        "https://courses.edx.org/certificates/92fcf493c93e477faab40ce616306af6",
-      alt_name: "edX",
-      color_code: "#FFBB0099",
+        "https://drive.google.com/file/d/1khfhv0dDzpmo6aTN4tAKnkw5yDlmuUJ0/view?usp=sharing",
+      alt_name: "Coursera",
+      color_code: "#00000099",
     },
     {
-      title: "Data Science",
-      subtitle: "- Alex Aklson",
-      logo_path: "ibm_logo.png",
+      title: "Introduction to Front-End Development",
+      subtitle: "- Meta",
+      logo_path: "certificate_7.png",
       certificate_link:
-        "https://courses.edx.org/certificates/232fa167e3d54dd38c2c6289d5de9344",
+        "https://drive.google.com/file/d/1hwRiruZOT4wA-iWxY6oFhYCgdR_QHXRR/view?usp=sharing",
+      alt_name: "Coursera",
+      color_code: "#00000099",
+    },
+    {
+      title: "Version Control",
+      subtitle: "- Meta",
+      logo_path: "certificate_8.png",
+      certificate_link:
+        "https://drive.google.com/file/d/1qlYR7RkjoEVjBK6fu_b2yOarQqKLu2FR/view?usp=sharing",
+      alt_name: "Coursera",
+      color_code: "#00000099",
+    },
+    {
+      title: "Java for Android",
+      subtitle: "- Vanderbilt University",
+      logo_path: "certificate_9.png",
+      certificate_link:
+        "https://drive.google.com/file/d/12Io5FO2lzeCbT0XsOvwWQ-6PYCOBrJ0g/view?usp=sharing",
+      alt_name: "Coursera",
+      color_code: "#8C151599",
+    },
+
+    {
+      title: "Building Web Applications in PHP",
+      subtitle: "- University of Michigan",
+      logo_path: "certificate_12.png",
+      certificate_link:
+        "https://drive.google.com/file/d/1fwKUXAX9Jctpyi4VZk867DMDeKArn-1f/view?usp=sharing",
+      alt_name: "Coursera",
+      color_code: "#00274C99", // University of Michigan blue
+    },
+    {
+      title: "Python Basics for Data Science",
+      subtitle: "- IBM",
+      logo_path: "certificate_11.png",
+      certificate_link:
+        "https://drive.google.com/file/d/1q9kNAjxv25eF5sMuuSvJ8If1IWhOxsY1/view?usp=sharing",
       alt_name: "IBM",
       color_code: "#1F70C199",
     },
     {
-      title: "SQL and Relational Databases",
-      subtitle: "- Cognitive class.ai",
-      logo_path: "cognitiveclass.png",
+      title: "Programming for the Web with JavaScript",
+      subtitle: "- University of Pennsylvania",
+      logo_path: "certificate_10.png",
       certificate_link:
-        "https://drive.google.com/file/d/17yu_YgiTDZWoaeYDjoqnXo9sRy4EmZsq/view",
-      alt_name: "NPTEL",
+        "https://drive.google.com/file/d/1D3UJDMJ4AEXteKYNLJ7a_apBjVicqoRm/view?usp=sharing",
+      alt_name: "edX",
       color_code: "#FFBB0099",
     },
     {
-      title: "Java for android",
-      subtitle: "- Vanderbilt university",
-      logo_path: "vu.png",
+      title: "Core Python for Everyone",
+      subtitle: "- Madhusudan Mothe",
+      logo_path: "certificate_1.png",
       certificate_link:
-        "https://drive.google.com/file/d/1rOguNkfs_Y8SZJMSbCMoGbqC-aNe_Add/view",
-      alt_name: "NPTEL",
-      color_code: "#FFBB0099",
+        "https://drive.google.com/file/d/1SnoALaaZl0XzSsTlfdeVWrsZhP4AaYSO/view?usp=sharing",
+      alt_name: "Udemy",
+      color_code: "#8C151599",
     },
   ],
 };

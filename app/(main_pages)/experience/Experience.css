@@ -1,0 +1,179 @@
+.experience-main {
+  width: 100vw;
+}
+
+.basic-experience {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.experience-heading-div {
+  display: flex;
+}
+
+.experience-heading-div>* {
+  flex: 1;
+}
+
+.experience-heading-img-div {
+  align-items: center;
+  justify-content: center;
+}
+
+.experience-heading-text-div {
+  text-align: center;
+}
+
+.experience-heading-img-div>* {
+  max-width: 100%;
+  height: auto;
+}
+
+.experience-heading-text {
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.experience-heading-sub-text {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.experience-header-detail-text {
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+/* Container for the arrows */
+.arrows-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 30px;
+}
+
+/* Individual arrow styling */
+.arrow {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #00BCFF;
+  border-width: 0 4px 4px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+}
+
+.arrow.second {
+  width: 40px;
+  height: 40px;
+  margin-top: 5px;
+}
+
+.arrow.third {
+  width: 30px;
+  height: 30px;
+  margin-top: 5px;
+}
+
+/* Different arrow sizes */
+.arrow-large {
+  width: 70px;
+  height: 70px;
+  border-width: 0 5px 5px 0;
+}
+
+/* Animation */
+.arrow:nth-child(1) {
+  animation: fadeInDown 2s infinite;
+}
+
+.arrow:nth-child(2) {
+  animation: fadeInDown 2s infinite 0.3s;
+}
+
+.arrow:nth-child(3) {
+  animation: fadeInDown 2s infinite 0.6s;
+}
+
+.arrow:nth-child(4) {
+  animation: fadeInDown 2s infinite 0.6s;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translateY(20px);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translateY(20px);
+  }
+}
+
+/* Optional text */
+.scroll-text {
+  margin-top: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #00BCFF;
+  font-weight: bold;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+
+@media (max-width: 1380px) {
+  .experience-heading-text {
+    font-size: 50px;
+    margin-top: 80px;
+  }
+
+  .experience-heading-sub-text {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-heading-text {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+
+  .experience-heading-sub-text {
+    font-size: 20px;
+  }
+
+  .experience-heading-div {
+    flex-direction: column;
+  }
+
+  .experience-header-detail-text {
+    font-size: 16px;
+    margin-right: 0px;
+    line-height: normal;
+    text-align: center;
+  }
+}
