@@ -1,8 +1,7 @@
-import React from "react";
-
-import "./Experience.css";
 import Image from "next/image";
 import { experience } from "@/app/libs/portfolio";
+
+import "./Experience.css";
 
 function Experience() {
   return (
@@ -11,7 +10,7 @@ function Experience() {
         <div className="experience-heading-div">
           <div className="experience-heading-img-div">
             <Image
-              src={require("/assets/images/Application programming.png")}
+              src={"/assets/images/Application programming.png"}
               alt=""
               width={800}
               height={300}
